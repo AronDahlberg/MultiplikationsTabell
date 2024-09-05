@@ -2,12 +2,10 @@
 
 namespace variant_1
 {
-    // Klass som hanterar matrislogik
     internal class Matrix
     {
         private int size;
 
-        // Konstruktor som tar matrisens storlek
         public Matrix(int size)
         {
             this.size = size;
@@ -27,7 +25,6 @@ namespace variant_1
         }
     }
 
-    // Huvudklass med Main-metoden
     internal class Program
     {
         static void Main(string[] args)
@@ -39,10 +36,8 @@ namespace variant_1
                 return;
             }
 
-            // Skapa en ny matris med storleken från kommandoradsargumentet
             Matrix matrix = new(size);
 
-            // Skriv ut matrisen
             matrix.PrintMatrix();
         }
     }
