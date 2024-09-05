@@ -45,7 +45,7 @@ namespace variant_1
             } while (!int.TryParse(input, out size) || size <= 0);
 
             // Skapar en ny matris med användarens storlek
-            Matrix matrix = new Matrix(size);
+            Matrix matrix = new(size);
 
             // Skriver ut matrisen
             matrix.PrintMatrix();
