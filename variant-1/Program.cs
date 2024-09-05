@@ -32,22 +32,17 @@ namespace variant_1
     {
         static void Main(string[] args)
         {
-            int size;
-            string? input;  // Tillåter null-värde
-
-            do
+            // Kontrollera att användaren skickar in ett argument för matrisstorleken
+            if (args.Length == 0 || !int.TryParse(args[0], out int size) || size <= 0)
             {
-                // Läser in storleken på matrisen från användaren
-                Console.Write("Ange storleken på matrisen: ");
-                input = Console.ReadLine();
+                Console.WriteLine("Ange en giltig matrisstorlek som ett argument.");
+                return;
+            }
 
-                // Försök att tolka inputen, om den inte är null
-            } while (!int.TryParse(input, out size) || size <= 0);
-
-            // Skapar en ny matris med användarens storlek
+            // Skapa en ny matris med storleken från kommandoradsargumentet
             Matrix matrix = new(size);
 
-            // Skriver ut matrisen
+            // Skriv ut matrisen
             matrix.PrintMatrix();
         }
     }
